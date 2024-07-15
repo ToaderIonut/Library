@@ -21,7 +21,7 @@ public class Book {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "order_id", referencedColumnName = "id", nullable = false) //genereaza automat customerID
-    private Customer customer;
+    private Order order;
 
     public int getId() {
         return id;
@@ -63,11 +63,11 @@ public class Book {
         this.adult = adult;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public Order getOrder() {
+        return order;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setOrder(Order order) {
+        this.order = order;
     }
 }
