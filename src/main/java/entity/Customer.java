@@ -25,6 +25,6 @@ public class Customer {
     @Column(name = "age", nullable = false)
     private int age;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner", orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer", orphanRemoval = true)
     private List<Order> orderList = new ArrayList<>();
 }
